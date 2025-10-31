@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>URLPattern Editor</title>
+		<meta name="description" content="Explore how URLPattern works" />
+		<meta property="og:url" content="https://urlpattern.r0b.io" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="URLPattern Editor" />
+		<meta name="theme-color" content="#17d7b7" />
+		<link rel="stylesheet" href="https://fonts.openlab.dev/rubik/rubik.css" />
+		<link rel="stylesheet" href="https://alembic.openlab.dev/labcoat.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="manifest" href="app.webmanifest" />
+		<link rel="icon" href="icon.png" />
+	</head>
+	<body>
+		<cover-layout centered=".spacer" space="s0" nopad>
+			<header>*://**</header>
+
+			<main>
+				<center-layout max="100em">
+					<stack-layout space="s3">
+						<div>
+							<h1>URLPattern Editor</h1>
+							<p>
+								Use this tool to see how
+								<a
+									href="https://developer.mozilla.org/en-US/docs/Web/API/URLPattern"
+									>URLPattern</a
+								>
+								works and debug what it does.
+							</p>
+						</div>
+						<switcher-layout>
+							<div class="flow">
+								<p class="columnHeading">Pattern init</p>
+								<label for="input" class="field">
+									<span class="field-label">Input</span>
+									<input
+										type="text"
+										id="input"
+										name="input"
+										value="https://example.com/*"
+									/>
+									<span class="field-error"></span>
+								</label>
+
+								<details-helper persist="options">
+									<details>
+										<summary>Specify Options</summary>
+										<label for="protocol" class="field">
+											<span class="field-label">protocol</span>
+											<input type="text" id="protocol" name="protocol" />
+											<span class="field-error"></span>
+										</label>
+										<label for="username" class="field">
+											<span class="field-label">username</span>
+											<input type="text" id="username" name="username" />
+											<span class="field-error"></span>
+										</label>
+										<label for="password" class="field">
+											<span class="field-label">password</span>
+											<input type="text" id="password" name="password" />
+											<span class="field-error"></span>
+										</label>
+										<label for="hostname" class="field">
+											<span class="field-label">hostname</span>
+											<input type="text" id="hostname" name="hostname" />
+											<span class="field-error"></span>
+										</label>
+										<label for="port" class="field">
+											<span class="field-label">port</span>
+											<input type="text" id="port" name="port" />
+											<span class="field-error"></span>
+										</label>
+										<label for="pathname" class="field">
+											<span class="field-label">pathname</span>
+											<input type="text" id="pathname" name="pathname" />
+											<span class="field-error"></span>
+										</label>
+										<label for="search" class="field">
+											<span class="field-label">search</span>
+											<input type="text" id="search" name="search" />
+											<span class="field-error"></span>
+										</label>
+										<label for="hash" class="field">
+											<span class="field-label">hash</span>
+											<input type="text" id="hash" name="hash" />
+											<span class="field-error"></span>
+										</label>
+									</details>
+								</details-helper>
+							</div>
+							<div class="flow">
+								<p class="columnHeading">Test value</p>
+
+								<label for="value" class="field">
+									<span class="field-label">value</span>
+									<input type="text" id="value" name="value" />
+								</label>
+
+								<div id="result" class="flow"></div>
+
+								<details-helper persist="output">
+									<details>
+										<summary>Raw output</summary>
+										<pre id="output"></pre>
+									</details>
+								</details-helper>
+							</div>
+						</switcher-layout>
+
+						<details-helper persist="debug">
+							<details>
+								<summary>Debug</summary>
+								<pre id="debug"></pre>
+							</details>
+						</details-helper>
+					</stack-layout>
+				</center-layout>
+			</main>
+
+			<div class="spacer"></div>
+
+			<footer>
+				<a href="https://github.com/robb-j/urlpattern-editor">View source</a>
+				/ Made by
+				<a href="https://www.r0b.io">Rob</a>
+			</footer>
+		</cover-layout>
+		<script
+			type="module"
+			src="https://alembic.openlab.dev/everything.js"
+		></script>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>

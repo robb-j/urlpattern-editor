@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"$comment": "This is just to help IDEs lint the code better",
+
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"newLine": "lf",
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"erasableSyntaxOnly": true,
+		"noImplicitReturns": true,
+		"noImplicitOverride": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"checkJs": true
+	},
+	"include": ["source"]
+}

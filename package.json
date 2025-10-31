@@ -1,0 +1,10 @@
+{
+	"private": true,
+	"type": "module",
+	"devDependencies": {
+		"prettier": "^3.6.2",
+		"typescript": "^5.9.3",
+		"urlpattern-polyfill": "^10.1.0"
+	},
+	"prettier": {}
+}
